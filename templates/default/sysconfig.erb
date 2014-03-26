@@ -35,6 +35,9 @@ JENKINS_USER="<%= @user %>"
 # Options to pass to java when running Jenkins.
 #
 JENKINS_JAVA_OPTIONS="-Djava.awt.headless=true"
+<% if node['jenkins']['master']['jenkins_java_options'] %>
+  JENKINS_JAVA_OPTIONS="$JENKINS_JAVA_OPTIONS <%= node['jenkins']['master']['jenkins_java_options'] %>"
+<% end %>
 
 ## Type:        integer(0:65535)
 ## Default:     8080

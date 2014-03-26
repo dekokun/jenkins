@@ -86,4 +86,5 @@ default['jenkins']['http_proxy']['ssl']['ssl_listen_ports'] = [443]
 default['jenkins']['http_proxy']['ssl']['dir'] = "#{default['jenkins']['server']['home']}/ssl"
 default['jenkins']['http_proxy']['ssl']['cert_path'] = "#{default['jenkins']['http_proxy']['ssl']['dir']}/jenkins.cert"
 default['jenkins']['http_proxy']['ssl']['key_path'] = "#{default['jenkins']['http_proxy']['ssl']['dir']}/jenkins.key"
-default['jenkins']['master']['jenkins_args'] = '-Djava.io.tmpdir=/var/cache/jenkins/war'
+default['jenkins']['master']['jenkins_args'] = ''
+default['jenkins']['master']['jenkins_java_options'] = '-Djava.io.tmpdir=/var/cache/jenkins/war'
